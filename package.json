@@ -1,0 +1,27 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "Cypress functional automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/cypress run ",
+    "headedtest": "npm run test -- --headed",
+    "chrometest": "npm run test -- -- browser chrome",
+    "recorddashboardtest": "npm run test -- --record --key 91dc6dc6-d949-49b6-8118-2ae6448cd2ae --spec cypress/integration/TestCases/*.js",
+    "ecommercetest": "npm run test -- --spec cypress/integration/TestCases/Ecommerce.js",
+    "alltestcases": "npm run test -- --spec cypress/integration/TestCases/*.js"
+  },
+  "author": "Dikshant",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.9.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^16.0.3"
+  }
+}
